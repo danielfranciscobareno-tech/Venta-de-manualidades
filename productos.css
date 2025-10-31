@@ -1,0 +1,327 @@
+/* ==== FONDO GENERAL ==== */
+body {
+  background-color: #FFF9F0; /* color general */
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==== NAVBAR ==== */
+.navbar {
+  background-color: #B0413E !important; /* parte superior */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ==== OFFCANVAS (MENÚ LATERAL) ==== */
+.offcanvas {
+  background-color: #B0413E !important;
+  color: white;
+}
+
+/* Título del menú */
+.offcanvas-title {
+  color: white;
+  font-weight: 600;
+}
+
+/* Enlaces dentro del menú lateral */
+.offcanvas .nav-link {
+  color: white !important;
+  font-weight: 500;
+  transition: background-color 0.3s ease, padding-left 0.3s ease;
+}
+
+.offcanvas .nav-link:hover {
+  background-color: #A33835 !important; /* tono más oscuro */
+  border-radius: 8px;
+  padding-left: 10px;
+}
+
+/* Botón de cierre blanco */
+.btn-close-white {
+  filter: invert(1);
+}
+
+/* ==== TITULOS ==== */
+h1, h2 {
+  text-align: center;
+  color: #2E2E2E;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* ==== CONTENEDOR DE TARJETAS ==== */
+.row {
+  width: 90%;
+  margin: 0 auto 40px auto;
+}
+
+/* ==== TARJETAS ==== */
+.card {
+  background-color: #EDEEF4;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ==== IMÁGENES ==== */
+.card-img-top {
+  height: 250px; /* ajusta la altura general */
+  width: 100%;
+  object-fit: contain; /* 🔹 la imagen se verá completa sin recorte */
+  background-color: #dbd1db; /* fondo detrás si hay espacio vacío */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* ==== TEXTO DE LAS TARJETAS ==== */
+.card-body {
+  text-align: center;
+  color: #2E2E2E;
+}
+
+/* ==== BOTONES ==== */
+.btn-primary {
+  background-color: #E57200;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #6B5A7B;
+}
+
+/* ==== RESPONSIVO ==== */
+@media (max-width: 768px) {
+  .card-img-top {
+    height: 180px; /* más pequeña en móvil */
+  }
+
+  h1, h2 {
+    font-size: 1.4rem;
+  }
+}
+/* ==== FONDO GENERAL ==== */
+body {
+  background-color: #FFF9F0; /* color general */
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==== NAVBAR ==== */
+.navbar {
+  background-color: #B0413E !important; /* parte superior */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ==== OFFCANVAS (MENÚ LATERAL) ==== */
+.offcanvas {
+  background-color: #B0413E !important;
+  color: white;
+}
+
+/* Título del menú */
+.offcanvas-title {
+  color: white;
+  font-weight: 600;
+}
+
+/* Enlaces dentro del menú lateral */
+.offcanvas .nav-link {
+  color: white !important;
+  font-weight: 500;
+  transition: background-color 0.3s ease, padding-left 0.3s ease;
+}
+
+.offcanvas .nav-link:hover {
+  background-color: #A33835 !important; /* tono más oscuro */
+  border-radius: 8px;
+  padding-left: 10px;
+}
+
+/* Botón de cierre blanco */
+.btn-close-white {
+  filter: invert(1);
+}
+
+/* ==== TITULOS ==== */
+h1, h2 {
+  text-align: center;
+  color: #2E2E2E;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* ==== CONTENEDOR DE TARJETAS ==== */
+.row {
+  width: 90%;
+  margin: 0 auto 40px auto;
+}
+
+/* ==== TARJETAS ==== */
+.card {
+  background-color: #EDEEF4;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ==== IMÁGENES ==== */
+.card-img-top {
+  height: 250px; /* ajusta la altura general */
+  width: 100%;
+  object-fit: contain; /* 🔹 la imagen se verá completa sin recorte */
+  background-color: #dbd1db; /* fondo detrás si hay espacio vacío */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* ==== TEXTO DE LAS TARJETAS ==== */
+.card-body {
+  text-align: center;
+  color: #2E2E2E;
+}
+
+/* ==== BOTONES ==== */
+.btn-primary {
+  background-color: #E57200;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #6B5A7B;
+}
+
+/* ==== RESPONSIVO ==== */
+@media (max-width: 768px) {
+  .card-img-top {
+    height: 180px; /* más pequeña en móvil */
+  }
+
+  h1, h2 {
+    font-size: 1.4rem;
+  }
+}
+/* ==== FONDO GENERAL ==== */
+body {
+  background-color: #FFF9F0; /* color general */
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==== NAVBAR ==== */
+.navbar {
+  background-color: #B0413E !important; /* parte superior */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ==== OFFCANVAS (MENÚ LATERAL) ==== */
+.offcanvas {
+  background-color: #B0413E !important;
+  color: white;
+}
+
+/* Título del menú */
+.offcanvas-title {
+  color: white;
+  font-weight: 600;
+}
+
+/* Enlaces dentro del menú lateral */
+.offcanvas .nav-link {
+  color: white !important;
+  font-weight: 500;
+  transition: background-color 0.3s ease, padding-left 0.3s ease;
+}
+
+.offcanvas .nav-link:hover {
+  background-color: #A33835 !important; /* tono más oscuro */
+  border-radius: 8px;
+  padding-left: 10px;
+}
+
+/* Botón de cierre blanco */
+.btn-close-white {
+  filter: invert(1);
+}
+
+/* ==== TITULOS ==== */
+h1, h2 {
+  text-align: center;
+  color: #2E2E2E;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* ==== CONTENEDOR DE TARJETAS ==== */
+.row {
+  width: 90%;
+  margin: 0 auto 40px auto;
+}
+
+/* ==== TARJETAS ==== */
+.card {
+  background-color: #EDEEF4;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ==== IMÁGENES ==== */
+.card-img-top {
+  height: 250px; /* ajusta la altura general */
+  width: 100%;
+  object-fit: contain; /* 🔹 la imagen se verá completa sin recorte */
+  background-color: #dbd1db; /* fondo detrás si hay espacio vacío */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* ==== TEXTO DE LAS TARJETAS ==== */
+.card-body {
+  text-align: center;
+  color: #2E2E2E;
+}
+
+/* ==== BOTONES ==== */
+.btn-primary {
+  background-color: #E57200;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #6B5A7B;
+}
+
+/* ==== RESPONSIVO ==== */
+@media (max-width: 768px) {
+  .card-img-top {
+    height: 180px; /* más pequeña en móvil */
+  }
+
+  h1, h2 {
+    font-size: 1.4rem;
+  }
+}

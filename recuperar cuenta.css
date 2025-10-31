@@ -1,0 +1,38 @@
+/* Fondo general */
+body {
+  background-color: #d6cce3; /* Lila claro */
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Barra superior */
+.encabezado {
+  background-color: #7b3fc2; /* Morado oscuro */
+  color: black;
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+/* Recuadro central */
+.contenedor {
+  background-color: #a245d4; /* Morado medio */
+  padding: 60px 80px;
+  border-radius: 6px;
+}
+
+/* Texto dentro del recuadro */
+.contenedor p {
+  color: black;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+}
+
+/* Botón */
+.btn-dark {
+  background-color: black !important;
+  border: none;
+}
+
+.btn-dark:hover {
+  background-color: #333 !important;
+}

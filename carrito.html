@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <!-- Enlace a la CDN de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="carrito.css">  
+</head>
+
+<body>
+  <!-- ✅ NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-light shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="#"></a>
+
+      <!-- Botón a la derecha que abre el menú -->
+      <button class="btn btn-outline-dark ms-auto" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#menuLateral" aria-controls="menuLateral">
+        ☰
+      </button>
+    </div>
+  </nav>
+
+  <!-- ✅ MENÚ LATERAL (offcanvas) -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="menuLateral" aria-labelledby="menuLateralLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="menuLateralLabel">Menú</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
+        <li class="nav-item"><a class="nav-link" href="carrito.html">Carrito</a></li>
+               <li class="nav-item"><a class="nav-link" href="cuenta.html">cuenta</a></li>
+        <li class="nav-item dropdown">
+      </ul>
+    </div>
+  </div>
+
+    <div class="container my-5">
+        <h2 class="text-center mb-4">¡Tu Carrito de Compras!</h2>
+        
+        <!-- Tabla del carrito -->
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">Producto</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Producto 1 -->
+                <tr>
+                    <td>
+                        <img src="https://via.placeholder.com/100" alt="Producto 1" class="img-fluid rounded">
+                        <span class="ms-2">Muñeco de Peluche</span>
+                    </td>
+                    <td>$10.00</td>
+                    <td>
+                        <input type="number" class="form-control" value="1" min="1">
+                    </td>
+                    <td class="subtotal">$10.00</td>
+                    <td>
+                        <button class="btn btn-danger btn-sm">Eliminar</button>
+                    </td>
+                </tr>
+                <!-- Producto 2 -->
+                <tr>
+                    <td>
+                        <img src="https://via.placeholder.com/100" alt="Producto 2" class="img-fluid rounded">
+                        <span class="ms-2">Maleta de Viaje</span>
+                    </td>
+                    <td>$25.00</td>
+                    <td>
+                        <input type="number" class="form-control" value="1" min="1">
+                    </td>
+                    <td class="subtotal">$25.00</td>
+                    <td>
+                        <button class="btn btn-danger btn-sm">Eliminar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <!-- Total -->
+        <div class="total-container">
+            <h4>Total: <span id="total">35.00</span> pesos</h4>
+        </div>
+
+        <!-- Botón para proceder al pago -->
+        <div class="d-flex justify-content-end mt-4">
+            <button class="btn btn-success btn-lg">Proceder al Pago</button>
+        </div>
+    </div>
+
+    <!-- Scripts de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Script para actualizar total -->
+    <script>
+        // Función para actualizar el total
+        const inputs = document.querySelectorAll('input[type="number"]');
+        const subtotalElements = document.querySelectorAll('.subtotal');
+        const totalElement = document.getElementById('total');
+        
+        inputs.forEach((input, index) => {
+            input.addEventListener('input', () => {
+                const price = parseFloat(input.closest('tr').children[1].textContent.replace('$', '').trim());
+                const quantity = parseInt(input.value);
+                const subtotal = price * quantity;
+                
+                // Actualizar subtotal en la tabla
+                subtotalElements[index].textContent = `$${subtotal.toFixed(2)}`;
+                
+                // Actualizar total global
+                updateTotal();
+            });
+        });
+
+        function updateTotal() {
+            let total = 0;
+            subtotalElements.forEach(subtotal => {
+                total += parseFloat(subtotal.textContent.replace('$', '').trim());
+            });
+            totalElement.textContent = total.toFixed(2);
+        }
+    </script>
+</body>
+
+</html>

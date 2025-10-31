@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <!-- Agregar Bootstrap desde CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- ✅ NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-light shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#">Logo</a>
+
+            <!-- Botón para abrir el menú lateral -->
+            <button class="btn btn-outline-dark ms-auto" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#menuLateral" aria-controls="menuLateral">
+                ☰
+            </button>
+        </div>
+    </nav>
+
+    <!-- ✅ MENÚ LATERAL (offcanvas) -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="menuLateral" aria-labelledby="menuLateralLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="menuLateralLabel">Menú</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
+                <li class="nav-item"><a class="nav-link" href="carrito.html">Carrito</a></li>
+                <li class="nav-item"><a class="nav-link" href="cuenta.html">Cuenta</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ✅ FORMULARIO DE INICIO DE SESIÓN -->
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Inicio de sesión</h2>
+        <form action="" method="POST" class="mx-auto" style="max-width: 400px;">
+            <div class="mb-3">
+                <label for="Usu" class="form-label">Usuario:</label>
+                <input type="text" id="Usu" name="Usu" class="form-control" placeholder="Ingrese su nombre de usuario"
+                    required autofocus>
+            </div>
+            <div class="mb-3">
+                <label for="Contra" class="form-label">Clave:</label>
+                <input type="password" id="Contra" name="Contra" class="form-control" placeholder="Ingrese su clave"
+                    minlength="8" maxlength="22" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Enviar</button>
+        </form>
+
+        <!-- Botón para ir a recuperar cuenta -->
+        <div class="text-center mt-3">
+            <a href="recuperar cuenta.html" class="btn btn-link">¿Olvidaste tu contraseña? </a>
+        </div>
+    </section>
+
+    <!-- Agregar Scripts de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

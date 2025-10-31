@@ -1,0 +1,62 @@
+/* ==== ESTILOS GENERALES ==== */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FFF9F0; /* Fondo general */
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #222;
+}
+
+/* ==== NAVBAR ==== */
+.navbar {
+  background-color: #B0413E !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ==== TITULOS ==== */
+h1, h2, h3 {
+  color: #2E2E2E;
+  text-align: center;
+  margin-top: 40px;
+}
+
+p {
+  text-align: center;
+  width: 90%;
+  max-width: 900px;
+  margin: 10px auto;
+  line-height: 1.6;
+}
+
+/* ==== CARRUSEL ==== */
+.carousel {
+  width: 90%; /* reduce el ancho total */
+  max-width: 800px; /* limita el tamaño máximo */
+  margin: 30px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.carousel img {
+  height: 600px; /* reduce la altura de las imágenes */
+  object-fit: cover; /* recorta para mantener proporción */
+  border-radius: 10px;
+}
+
+/* ==== BOTONES ==== */
+.btn-primary {
+  background-color: #E57200;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #6B5A7B;
+}
+
+/* ==== TEXTOS ==== */
+h3 {
+  margin-top: 60px;
+  font-weight: 600;
+}
+
