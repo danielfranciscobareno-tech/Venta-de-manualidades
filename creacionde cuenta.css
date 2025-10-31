@@ -1,139 +1,166 @@
-/* Reseteo básico */
+/* ==== RESETEO BÁSICO ==== */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Estilos generales */
+/* ==== ESTILOS GENERALES ==== */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-    line-height: 1.6;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background-color: #FFF9F0; /* Fondo artesanal */
+  color: #2E2E2E;
+  line-height: 1.6;
 }
 
-/* Cabecera */
+/* ==== CABECERA ==== */
 header {
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
+  background-color: #B0413E; /* Rojo artesanal */
+  color: #FFF9F0;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
 header img {
-    max-width: 150px;
-    margin-bottom: 20px;
+  max-width: 150px;
+  margin-bottom: 15px;
 }
 
+/* ==== NAVEGACIÓN ==== */
 nav ul {
-    list-style: none;
-    text-align: center;
+  list-style: none;
+  text-align: center;
 }
 
 nav ul li {
-    display: inline-block;
-    margin-right: 30px;
+  display: inline-block;
+  margin-right: 30px;
+  position: relative;
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+  color: #FFF9F0;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+  background-color: #A33835; /* Rojo más oscuro */
 }
 
+/* Submenús */
 nav ul li ul {
-    display: none;
-    position: absolute;
-    background-color: #444;
-    padding: 10px;
-    list-style: none;
+  display: none;
+  position: absolute;
+  background-color: #B0413E;
+  padding: 10px;
+  list-style: none;
+  border-radius: 8px;
+  min-width: 150px;
+  z-index: 100;
 }
 
 nav ul li:hover > ul {
-    display: block;
+  display: block;
 }
 
 nav ul li ul li {
-    display: block;
+  display: block;
+  margin: 8px 0;
 }
 
-/* Sección de formulario */
+nav ul li ul li a {
+  display: block;
+  color: #FFF9F0;
+  padding: 8px;
+}
+
+nav ul li ul li a:hover {
+  background-color: #A33835;
+}
+
+/* ==== FORMULARIO ==== */
 section {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #EDEEF4; /* Fondo claro artesanal */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 h2 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 20px;
+  text-align: center;
+  color: #2E2E2E;
+  margin-bottom: 20px;
+  font-weight: 600;
 }
 
+/* Campos del formulario */
 form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 label {
-    margin: 10px 0 5px;
-    font-weight: bold;
+  margin: 10px 0 5px;
+  font-weight: 600;
 }
 
 input[type="text"],
 input[type="password"],
 input[type="email"],
 input[type="number"] {
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: #FFF9F0;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="email"]:focus,
-input[type="number"]:focus {
-    border-color: #5f9ea0;
-    outline: none;
+input:focus {
+  border-color: #E57200; /* Naranja artesanal */
+  box-shadow: 0 0 6px rgba(229, 114, 0, 0.4);
+  outline: none;
 }
 
+/* ==== BOTONES ==== */
 button {
-    background-color: #5f9ea0;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
+  background-color: #E57200; /* Naranja artesanal */
+  color: #FFF9F0;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 button:hover {
-    background-color: #468a75;
+  background-color: #6B5A7B; /* Violeta grisáceo */
+  transform: translateY(-2px);
 }
 
-/* Estilos para dispositivos pequeños */
+/* ==== RESPONSIVIDAD ==== */
 @media screen and (max-width: 600px) {
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
 
-    nav ul li a {
-        font-size: 14px;
-    }
+  nav ul li a {
+    font-size: 14px;
+  }
 
-    section {
-        width: 90%;
-        padding: 15px;
-    }
+  section {
+    width: 90%;
+    padding: 20px;
+  }
 }

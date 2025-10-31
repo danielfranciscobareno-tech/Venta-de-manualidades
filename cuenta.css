@@ -1,21 +1,55 @@
 /* ==== FONDO GENERAL ==== */
 body {
-  background-color: #D4C6DF; /* color general */
+  background-color: #FFF9F0; /* Beige artesanal */
   font-family: "Helvetica Neue", Arial, sans-serif;
   margin: 0;
   padding: 0;
+  color: #2E2E2E;
 }
 
 /* ==== NAVBAR ==== */
 .navbar {
-  background-color: #EDEEF4 !important; /* parte superior */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #B0413E !important; /* Rojo artesanal */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-brand {
+  color: #FFF9F0 !important;
+  font-weight: 600;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+/* ==== OFFCANVAS ==== */
+.offcanvas {
+  background-color: #EDEEF4; /* Gris claro artesanal */
+  color: #2E2E2E;
+}
+
+.offcanvas-header {
+  background-color: #B0413E; /* Rojo artesanal */
+  color: #FFF9F0;
+}
+
+.offcanvas-body a {
+  display: block;
+  color: #2E2E2E;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.offcanvas-body a:hover {
+  background-color: #dbd1db; /* Lavanda claro */
 }
 
 /* ==== TITULOS ==== */
 h1, h2 {
   text-align: center;
-  color: #333;
+  color: #2E2E2E;
   margin-top: 40px;
   margin-bottom: 20px;
   font-weight: 600;
@@ -31,7 +65,7 @@ h1, h2 {
 .card {
   background-color: #EDEEF4;
   border: none;
-  border-radius: 10px;
+  border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -43,37 +77,45 @@ h1, h2 {
 
 /* ==== IMÁGENES ==== */
 .card-img-top {
-  height: 250px; /* ajusta la altura general */
+  height: 250px;
   width: 100%;
-  object-fit: contain; /* 🔹 la imagen se verá completa sin recorte */
-  background-color: #fff; /* fondo blanco detrás si hay espacio vacío */
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  object-fit: contain;
+  background-color: #FFF9F0; /* Beige artesanal detrás */
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
 }
 
 /* ==== TEXTO DE LAS TARJETAS ==== */
 .card-body {
   text-align: center;
-  color: #333;
+  color: #2E2E2E;
 }
 
 /* ==== BOTONES ==== */
 .btn-primary {
-  background-color: #7C6A8D;
+  background-color: #E57200; /* Naranja artesanal */
   border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #FFF9F0;
 }
 
 .btn-primary:hover {
-  background-color: #6B5A7B;
+  background-color: #6B5A7B; /* Violeta grisáceo */
 }
 
 /* ==== RESPONSIVO ==== */
 @media (max-width: 768px) {
   .card-img-top {
-    height: 180px; /* más pequeña en móvil */
+    height: 180px;
   }
 
   h1, h2 {
     font-size: 1.4rem;
+  }
+
+  .offcanvas-body a {
+    padding: 8px;
+    font-size: 0.95rem;
   }
 }

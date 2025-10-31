@@ -1,38 +1,67 @@
-/* Fondo general */
+/* ==== FONDO GENERAL ==== */
 body {
-  background-color: #d6cce3; /* Lila claro */
+  background-color: #FFF9F0; /* Beige artesanal */
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #2E2E2E;
 }
 
-/* Barra superior */
+/* ==== BARRA SUPERIOR ==== */
 .encabezado {
-  background-color: #7b3fc2; /* Morado oscuro */
-  color: black;
-  padding: 10px 20px;
-  font-weight: bold;
+  background-color: #B0413E; /* Rojo artesanal */
+  color: #FFF9F0;
+  padding: 12px 20px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Recuadro central */
+/* ==== RECUADRO CENTRAL ==== */
 .contenedor {
-  background-color: #a245d4; /* Morado medio */
+  background-color: #EDEEF4; /* Gris claro */
   padding: 60px 80px;
-  border-radius: 6px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 800px;
+  margin: 60px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  text-align: center;
 }
 
-/* Texto dentro del recuadro */
+/* ==== TEXTO DENTRO DEL RECUADRO ==== */
 .contenedor p {
-  color: black;
-  font-weight: bold;
-  margin: 0 0 10px 0;
+  color: #2E2E2E;
+  font-weight: 500;
+  margin: 0 0 20px 0;
+  font-size: 1.1rem;
+  line-height: 1.5;
 }
 
-/* Botón */
+/* ==== BOTÓN ==== */
 .btn-dark {
-  background-color: black !important;
+  background-color: #E57200 !important; /* Naranja artesanal */
   border: none;
+  color: #FFF9F0 !important;
+  font-weight: 600;
+  padding: 10px 25px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn-dark:hover {
-  background-color: #333 !important;
+  background-color: #6B5A7B !important; /* Violeta grisáceo */
+  transform: scale(1.05);
+}
+
+/* ==== RESPONSIVO ==== */
+@media (max-width: 768px) {
+  .contenedor {
+    padding: 40px 20px;
+    width: 90%;
+  }
+
+  .encabezado {
+    text-align: center;
+    font-size: 1rem;
+  }
 }

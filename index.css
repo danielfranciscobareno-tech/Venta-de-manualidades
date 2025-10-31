@@ -2,61 +2,356 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #FFF9F0; /* Fondo general */
+  background-color: #FFF9F0; /* fondo artesanal claro */
   font-family: "Helvetica Neue", Arial, sans-serif;
-  color: #222;
+  color: #2E2E2E; /* texto gris oscuro */
 }
 
 /* ==== NAVBAR ==== */
 .navbar {
-  background-color: #B0413E !important;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background-color: #B0413E !important; /* rojo artesanal */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* ==== TITULOS ==== */
+.navbar-brand,
+.nav-link {
+  color: #FFF9F0 !important;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #E57200 !important; /* naranja artesanal al pasar */
+}
+
+/* ==== OFFCANVAS (MENÚ LATERAL) ==== */
+.offcanvas {
+  background-color: #B0413E !important; /* rojo artesanal */
+  color: white;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.offcanvas-title {
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.offcanvas .nav-link {
+  color: #FFF9F0 !important;
+  font-weight: 500;
+  transition: background-color 0.3s ease, padding-left 0.3s ease;
+  border-radius: 8px;
+  margin: 4px 0;
+}
+
+.offcanvas .nav-link:hover {
+  background-color: #A33835 !important; /* rojo más oscuro */
+  padding-left: 10px;
+}
+
+.btn-close-white {
+  filter: invert(1);
+}
+
+/* ==== TÍTULOS ==== */
 h1, h2, h3 {
   color: #2E2E2E;
   text-align: center;
   margin-top: 40px;
+  margin-bottom: 20px;
+  font-weight: 600;
 }
 
+/* ==== PÁRRAFOS ==== */
 p {
   text-align: center;
   width: 90%;
   max-width: 900px;
   margin: 10px auto;
   line-height: 1.6;
+  color: #2E2E2E;
 }
 
 /* ==== CARRUSEL ==== */
 .carousel {
-  width: 90%; /* reduce el ancho total */
-  max-width: 800px; /* limita el tamaño máximo */
-  margin: 30px auto;
-  border-radius: 10px;
+  width: 90%;
+  max-width: 800px;
+  margin: 30px auto 50px auto;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  background-color: #EDEEF4; /* gris claro */
 }
 
 .carousel img {
-  height: 600px; /* reduce la altura de las imágenes */
-  object-fit: cover; /* recorta para mantener proporción */
-  border-radius: 10px;
+  height: 500px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  background-color: #dbd1db; /* fondo lavanda */
 }
 
 /* ==== BOTONES ==== */
 .btn-primary {
-  background-color: #E57200;
+  background-color: #E57200; /* naranja artesanal */
   border: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .btn-primary:hover {
-  background-color: #6B5A7B;
+  background-color: #6B5A7B; /* violeta grisáceo */
+  transform: scale(1.05);
 }
 
-/* ==== TEXTOS ==== */
-h3 {
-  margin-top: 60px;
+/* ==== RESPONSIVO ==== */
+@media (max-width: 768px) {
+  .carousel img {
+    height: 300px; /* más baja en móvil */
+  }
+
+  h1, h2, h3 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+}
+/* ==== ESTILOS GENERALES ==== */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FFF9F0; /* fondo artesanal claro */
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #2E2E2E; /* texto gris oscuro */
+}
+
+/* ==== NAVBAR ==== */
+.navbar {
+  background-color: #B0413E !important; /* rojo artesanal */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand,
+.nav-link {
+  color: #FFF9F0 !important;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #E57200 !important; /* naranja artesanal al pasar */
+}
+
+/* ==== OFFCANVAS (MENÚ LATERAL) ==== */
+.offcanvas {
+  background-color: #B0413E !important; /* rojo artesanal */
+  color: white;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.offcanvas-title {
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.offcanvas .nav-link {
+  color: #FFF9F0 !important;
+  font-weight: 500;
+  transition: background-color 0.3s ease, padding-left 0.3s ease;
+  border-radius: 8px;
+  margin: 4px 0;
+}
+
+.offcanvas .nav-link:hover {
+  background-color: #A33835 !important; /* rojo más oscuro */
+  padding-left: 10px;
+}
+
+.btn-close-white {
+  filter: invert(1);
+}
+
+/* ==== TÍTULOS ==== */
+h1, h2, h3 {
+  color: #2E2E2E;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
   font-weight: 600;
 }
 
+/* ==== PÁRRAFOS ==== */
+p {
+  text-align: center;
+  width: 90%;
+  max-width: 900px;
+  margin: 10px auto;
+  line-height: 1.6;
+  color: #2E2E2E;
+}
+
+/* ==== CARRUSEL ==== */
+.carousel {
+  width: 90%;
+  max-width: 800px;
+  margin: 30px auto 50px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  background-color: #EDEEF4; /* gris claro */
+}
+
+.carousel img {
+  height: 500px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  background-color: #dbd1db; /* fondo lavanda */
+}
+
+/* ==== BOTONES ==== */
+.btn-primary {
+  background-color: #E57200; /* naranja artesanal */
+  border: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #6B5A7B; /* violeta grisáceo */
+  transform: scale(1.05);
+}
+
+/* ==== RESPONSIVO ==== */
+@media (max-width: 768px) {
+  .carousel img {
+    height: 300px; /* más baja en móvil */
+  }
+
+  h1, h2, h3 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+}
+/* ==== ESTILOS GENERALES ==== */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FFF9F0; /* fondo artesanal claro */
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #2E2E2E; /* texto gris oscuro */
+}
+
+/* ==== NAVBAR ==== */
+.navbar {
+  background-color: #B0413E !important; /* rojo artesanal */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand,
+.nav-link {
+  color: #FFF9F0 !important;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #E57200 !important; /* naranja artesanal al pasar */
+}
+
+/* ==== OFFCANVAS (MENÚ LATERAL) ==== */
+.offcanvas {
+  background-color: #B0413E !important; /* rojo artesanal */
+  color: white;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.offcanvas-title {
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.offcanvas .nav-link {
+  color: #FFF9F0 !important;
+  font-weight: 500;
+  transition: background-color 0.3s ease, padding-left 0.3s ease;
+  border-radius: 8px;
+  margin: 4px 0;
+}
+
+.offcanvas .nav-link:hover {
+  background-color: #A33835 !important; /* rojo más oscuro */
+  padding-left: 10px;
+}
+
+.btn-close-white {
+  filter: invert(1);
+}
+
+/* ==== TÍTULOS ==== */
+h1, h2, h3 {
+  color: #2E2E2E;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* ==== PÁRRAFOS ==== */
+p {
+  text-align: center;
+  width: 90%;
+  max-width: 900px;
+  margin: 10px auto;
+  line-height: 1.6;
+  color: #2E2E2E;
+}
+
+/* ==== CARRUSEL ==== */
+.carousel {
+  width: 90%;
+  max-width: 800px;
+  margin: 30px auto 50px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  background-color: #EDEEF4; /* gris claro */
+}
+
+.carousel img {
+  height: 500px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  background-color: #dbd1db; /* fondo lavanda */
+}
+
+/* ==== BOTONES ==== */
+.btn-primary {
+  background-color: #E57200; /* naranja artesanal */
+  border: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #6B5A7B; /* violeta grisáceo */
+  transform: scale(1.05);
+}
+
+/* ==== RESPONSIVO ==== */
+@media (max-width: 768px) {
+  .carousel img {
+    height: 300px; /* más baja en móvil */
+  }
+
+  h1, h2, h3 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+}
