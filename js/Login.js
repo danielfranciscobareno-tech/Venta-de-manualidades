@@ -23,6 +23,7 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 // ✅ Captura el formulario
+document.addEventListener("DOMContentLoaded", () => {
 const form = document.querySelector("form");
 
 form.addEventListener("submit", async (e) => {
@@ -60,5 +61,5 @@ console.log(".")
     console.error("Error al verificar el usuario:", error);
     alert("Hubo un error al iniciar sesión. Revisa la consola.");
   }
-
+});
 });
