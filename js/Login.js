@@ -1,4 +1,4 @@
-//// Login.js
+// Login.js
 
 // Importar Firebase SDKs
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-app.js";
@@ -38,10 +38,12 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       // 🔍 Buscar usuario en Firestore
       const usuariosRef = collection(db, "usuarios");
-      const q = query(usuariosRef,
+      const q = query(
+        usuariosRef,
         where("usuario", "==", usuario),
         where("clave", "==", clave)
       );
+
       const querySnapshot = await getDocs(q);
 
       if (!querySnapshot.empty) {
@@ -50,9 +52,12 @@ document.addEventListener("DOMContentLoaded", () => {
         // Guardar el usuario en localStorage (opcional)
         localStorage.setItem("usuario", usuario);
 
-        // 🔄 Redirigir a productos.html (MISMO DIRECTORIO)
+        // 🟢 Redirección compatible con GitHub Pages y local
         setTimeout(() => {
-          window.location.href = "productos.html";
+          // Obtiene la URL base actual (sin el nombre del archivo)
+          const base = window.location.origin + window.location.pathname.replace(/\/[^/]*$/, '/');
+          // Redirige a productos.html en el mismo directorio
+          window.location.href = base + "productos.html";
         }, 1500);
 
       } else {
