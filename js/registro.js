@@ -1,6 +1,10 @@
-// Login.js
+// Registro.js
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-app.js";
+import { 
+  getFirestore, collection, addDoc
+} from "https://www.gstatic.com/firebasejs/12.5.0/firebase-firestore.js";
+
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -9,11 +13,10 @@
     apiKey: "AIzaSyA6i5fOo7_g_GyvVDZqA3KdI0wL46LSBmw",
     authDomain: "studio-6064256749-30e66.firebaseapp.com",
     projectId: "studio-6064256749-30e66",
-    storageBucket: "studio-6064256749-30e66.firebasestorage.app",
+    storageBucket: "studio-6064256749-30e66.appspot.com",
     messagingSenderId: "196390592287",
     appId: "1:196390592287:web:302538191937b337735a2a"
   };
-
 // 🔧 Inicializa Firebase y Firestore
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
@@ -52,7 +55,7 @@ form.addEventListener("submit", async (e) => {
 
     // 🔄 Redirección después de 2 segundos
     setTimeout(() => {
-      window.location.href = "/login.html"; // 🔁 Cambia esto si tu archivo tiene otro nombre
+      window.location.href = "login.html"; // 🔁 Cambia esto si tu archivo tiene otro nombre
     }, 2000);
 
   } catch (error) {
